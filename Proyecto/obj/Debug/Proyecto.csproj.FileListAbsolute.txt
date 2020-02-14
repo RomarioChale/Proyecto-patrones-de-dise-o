@@ -1,0 +1,7 @@
+C:\Users\edwin.chale\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.csprojAssemblyReference.cache
+C:\Users\edwin.chale\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\edwin.chale\source\repos\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\edwin.chale\source\repos\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\edwin.chale\source\repos\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\edwin.chale\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\edwin.chale\source\repos\Proyecto\Proyecto\obj\Debug\Proyecto.pdb

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE71D51A-AD97-4F06-B1FB-212AEC1EF28E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Proyecto</RootNamespace>
+    <AssemblyName>Proyecto</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entitidades\EstadoPedido.cs" />
+    <Compile Include="Entitidades\Paqueteria\DHL.cs" />
+    <Compile Include="Entitidades\Paqueteria\Estafeta.cs" />
+    <Compile Include="Entitidades\Paqueteria\Fedex.cs" />
+    <Compile Include="Entitidades\Paqueteria\Interfaces\IPaqueteria.cs" />
+    <Compile Include="Entitidades\Pedido.cs" />
+    <Compile Include="Entitidades\Transporte\Avion.cs" />
+    <Compile Include="Entitidades\Transporte\Barco.cs" />
+    <Compile Include="Entitidades\Transporte\ITransporte.cs" />
+    <Compile Include="Entitidades\Transporte\Tren.cs" />
+    <Compile Include="Persistencia\BuilderPedido\PedidoDHL.cs" />
+    <Compile Include="Persistencia\BuilderPedido\PedidoEstafeta.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\ExpresionesService.cs" />
+    <Compile Include="Servicios\Interfaces\IVerificadorPaqueteria.cs" />
+    <Compile Include="Servicios\Interfaces\IPedidoService.cs" />
+    <Compile Include="Servicios\PedidoService.cs" />
+    <Compile Include="Servicios\Utilidades\Calculos\Interfaces\ICalculadorFechaEntrega.cs" />
+    <Compile Include="Servicios\Utilidades\Calculos\Interfaces\ICalculadorCostoEnvio.cs" />
+    <Compile Include="Servicios\Utilidades\ConvertidorTxtObjeto.cs" />
+    <Compile Include="Persistencia\BuilderPedido\PedidoBuilder.cs" />
+    <Compile Include="Persistencia\BuilderPedido\PedidoAssemble.cs" />
+    <Compile Include="Persistencia\BuilderPedido\PedidoFedex.cs" />
+    <Compile Include="Servicios\Utilidades\BuscadorArchivo.cs" />
+    <Compile Include="Servicios\Utilidades\Calculos\CalculadorCostoEnvio.cs" />
+    <Compile Include="Servicios\Utilidades\Calculos\CalculadorFechaEntrega.cs" />
+    <Compile Include="Servicios\Utilidades\Calculos\CalculadorTiempoTraslado.cs" />
+    <Compile Include="Servicios\Utilidades\Calculos\Interfaces\ICalculadorTiempoEntrega.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\ExpresionDentroDe.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\ExpresionLlegara.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\ExpresionesObservador.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\ExpresionHace.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\ExpresionHaSalido.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\ExpresionLLego.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\ExpresionSalio.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\ExpresionTendra.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\Interfaces\IObservadorExpresion.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\ExpresionTuvo.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\ExpresionSaldra.cs" />
+    <Compile Include="Servicios\Utilidades\Expresiones\ObservadorExpresion\Utilidades\TipoExpresiones.cs" />
+    <Compile Include="Servicios\Interfaces\ILectorArchivo.cs" />
+    <Compile Include="Servicios\Interfaces\IBuscadorArchivo.cs" />
+    <Compile Include="Servicios\Utilidades\IPaquteria.cs" />
+    <Compile Include="Servicios\Utilidades\IPedido.cs" />
+    <Compile Include="Servicios\Utilidades\LectorArchivo.cs" />
+    <Compile Include="Servicios\Utilidades\NotFoudException.cs" />
+    <Compile Include="Servicios\Utilidades\Validador rango de tiempo\CalculadorDiferenciaFechas.cs" />
+    <Compile Include="Servicios\Utilidades\Validador rango de tiempo\Interfaces\ICalculadorDiferenciaFechas.cs" />
+    <Compile Include="Servicios\Utilidades\Validador rango de tiempo\Utilerias\UnidadTiempo.cs" />
+    <Compile Include="Servicios\Utilidades\Validador rango de tiempo\ValidadorRangoTiempo.cs" />
+    <Compile Include="Servicios\Utilidades\VerificadorConstructorPaqueteria.cs" />
+    <Compile Include="Servicios\Utilidades\VerificadorPaqueteria.cs" />
+    <Compile Include="Servicios\Utilidades\VerificadorTransporte.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
